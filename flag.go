@@ -15,14 +15,14 @@ import (
 const (
 	cmdQuote = `
 Usage 1:
-	go-dao-code-gen -h 127.0.0.1 -u root -p 123456 -D dbname -o ./dao 
+	go-dao-code-gen -h 127.0.0.1 -u user -p passwd -D dbname -o ./dao 
 
 	or
 
-	go-dao-code-gen -dsn='root:123456@tcp(127.0.0.1:3306)/dbname?charset=utf8' -o ./dao
+	go-dao-code-gen -dsn='user:passwd@tcp(127.0.0.1:3306)/dbname?charset=utf8' -o ./dao
 
 Usage 2(Specified tables):
-	go-dao-code-gen -h 127.0.0.1 -u root -p 123456 -D dbname -o ./dao -tables "tbl1,tbl2"
+	go-dao-code-gen -h 127.0.0.1 -u user -p passwd -D dbname -o ./dao -tables "tbl1,tbl2"
 `
 )
 
@@ -47,7 +47,7 @@ func parseFlags() {
 
 	flag.StringVar(&h, "h", "127.0.0.1", "Connect to host.")
 
-	flag.StringVar(&u, "u", "root", "User for login if not root user.")
+	flag.StringVar(&u, "u", "user", "User for login if not user user.")
 
 	flag.StringVar(&p, "p", "", "Password to use when connecting to server.")
 
@@ -76,7 +76,7 @@ func parseFlags() {
 	dsn = strings.TrimSpace(dsn)
 	if dsn == "" {
 		if D == "" {
-			if u != "root" {
+			if u != "user" {
 				D = u
 			} else {
 				fmt.Printf("Error: missed -D or -database flag to set database name.\n")
