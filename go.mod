@@ -1,4 +1,4 @@
-module github.com/moon072/go-dao-code-gen
+module github.com/wadasann/go-dao-code-gen
 
 go 1.24.2
 

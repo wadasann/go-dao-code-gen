@@ -29,7 +29,7 @@ This project leverages several excellent open-source libraries:
 Install the tool using `go install`:
 
 ```bash
-go install github.com/moon072/go-dao-code-gen@latest
+go install github.com/wadasann/go-dao-code-gen@latest
 ```
 
 ## Usage

@@ -6,7 +6,7 @@ import (
 	"text/template"
 
 	"github.com/kenshaw/snaker"
-	"github.com/moon072/go-dao-code-gen/tplbin"
+	"github.com/wadasann/go-dao-code-gen/tplbin"
 )
 
 type Indexes map[string][]string // index name -> columns
