@@ -40,7 +40,7 @@ Generate DAO code for all tables in a database:
 
 ```bash
 # Using individual connection parameters
-go-dao-code-gen -h 127.0.0.1 -u root -p 123456 -D dbname -o ./dao
+go-dao-code-gen -h 127.0.0.1 -u user -p passwd -D dbname -o ./dao
 
 # Using DSN connection string
 go-dao-code-gen -dsn='user:passwd@tcp(127.0.0.1:3306)/dbname?charset=utf8' -o ./dao
@@ -51,7 +51,7 @@ go-dao-code-gen -dsn='user:passwd@tcp(127.0.0.1:3306)/dbname?charset=utf8' -o ./
 Generate DAO code only for specified tables:
 
 ```bash
-go-dao-code-gen -h 127.0.0.1 -u user -p 123456 -D dbname -o ./dao -tables "users,orders,products"
+go-dao-code-gen -h 127.0.0.1 -u user -p passwd -D dbname -o ./dao -tables "users,orders,products"
 ```
 
 ### Command Line Options
@@ -60,7 +60,7 @@ go-dao-code-gen -h 127.0.0.1 -u user -p 123456 -D dbname -o ./dao -tables "users
 $ go-dao-code-gen -help
 
 Usage 1:
-	go-dao-code-gen -h 127.0.0.1 -u user -p 123456 -D dbname -o ./dao
+	go-dao-code-gen -h 127.0.0.1 -u user -p passwd -D dbname -o ./dao
 
 	or
 
